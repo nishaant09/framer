@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { motion } from "framer-motion"
+import "./App.css"
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='example-container'>
+      <motion.div
+        animate={{
+          rotate: [0, 0, 0, 0],
+          x: [0, 0, 0, 0, 0, 0, 0]
+        }}
+        transition={{ repeat: Infinity, duration: 1 }}
+      ></motion.div>
+      <motion.div className='circle green'
+       whileHover={{ rotate: [0, 360], x: [0, 20] }}
+        transition={{ duration: 0.5 }}></motion.div>
+       <motion.div className='circle red'
+      animate={{ rotate:[0,0,0,0],
+      x:[0,0,0,0,0,0]}}
+       transition={{repeat:Infinity,duration:1}}></motion.div>
+       <motion.div className='circle blue'
+      animate={{ rotate:[0,0,0,0],
+      x:[0,0,0,0,0,0]}}
+       transition={{repeat:Infinity,duration:1}}></motion.div>
+
+       <motion.div className='circle yellow'
+        animate={{ rotate:[0,0,0,0], x:[0,0,0,0,0,0]}}
+        transition={{repeat:Infinity,duration:1}}>
+
+       </motion.div>
+
+       <motion.div className='circle purple'
+       animate={{rotate:[0,0,0,0],x:[0,0,0,0,0,0,]}}
+       transition={{repeat:Infinity,duration:1}} >
+
+       </motion.div>
+
+      <span className='text'>pick a color</span>
+      
+      
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
+
