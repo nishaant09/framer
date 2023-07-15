@@ -13,12 +13,13 @@ const App = () => {
         transition={{ repeat: Infinity, duration: 1 }}
       ></motion.div>
       <motion.div className='circle green'
-       whileHover={{ rotate: [0, 360], x: [0, 20] }}
-        transition={{ duration: 0.5 }}></motion.div>
+       whileHover={{ rotate: [0, 0],  x: [0, -30, 30],
+          y: [0, 30, 0] }}
+        transition={{ duration: 1 }}></motion.div>
        <motion.div className='circle red'
-      animate={{ rotate:[0,0,0,0],
-      x:[0,0,0,0,0,0]}}
-       transition={{repeat:Infinity,duration:1}}></motion.div>
+      whileHover={{ rotate:[0,0],
+      x:[0,20], y:[0,170]}}
+       transition={{duration:1}}></motion.div>
        <motion.div className='circle blue'
       animate={{ rotate:[0,0,0,0],
       x:[0,0,0,0,0,0]}}
